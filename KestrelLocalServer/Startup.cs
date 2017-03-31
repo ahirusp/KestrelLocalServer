@@ -23,9 +23,8 @@ namespace KestrelLocalServer
 
         public void Configure(IApplicationBuilder app)
         {
-            var serverAddressesFeature = app.ServerFeatures.Get<IServerAddressesFeature>();
-
             app.UseMvcWithDefaultRoute();
+            app.UseStaticFiles();
         }
     }
 }
